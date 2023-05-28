@@ -38,7 +38,16 @@ const doughnutsOptions = {
     datalabels: datalabelsConfig,
     title: {
       display: true,
+      color: "rgb(75, 192, 192)",
       text: "Répartition du PIB dans le monde",
+      font: {
+        size: 20,
+      },
+    },
+    subtitle: {
+      display: true,
+      // color: "#000",
+      text: "en pourcentage",
       font: {
         size: 16,
       },

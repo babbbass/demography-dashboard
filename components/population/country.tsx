@@ -1,16 +1,17 @@
+import React from "react"
 import { Line as LineChart } from "react-chartjs-2"
 import { Chart as ChartJS, PointElement, LineElement } from "chart.js"
-import { worldPopulation } from "@/utils/datas/population"
+import { countryPopulation } from "@/utils/datas/population"
 import { datalabelsConfig } from "@/config"
 
 ChartJS.register(PointElement, LineElement)
 
 const data = {
-  labels: worldPopulation.map((pop) => pop.year),
+  labels: countryPopulation.map((pop) => pop.name),
   datasets: [
     {
-      label: "Population mondiale depuis 1950",
-      data: worldPopulation.map((pop) => pop.population),
+      label: "en millions",
+      data: countryPopulation.map((pop) => pop.population.toFixed(0)),
       fill: false,
       borderColor: "rgb(75, 192, 192)",
     },
@@ -32,6 +33,6 @@ const options = {
   },
 }
 
-export default function Line() {
-  return <LineChart height={180} data={data} options={options} />
+export default function Country() {
+  return <LineChart data={data} options={options} height={180} />
 }

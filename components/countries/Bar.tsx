@@ -17,7 +17,7 @@ const data = {
     {
       label: "PIB 2022",
       data: TOP10_PIB.map((country) => country.PIB_2022),
-      backgroundColor: "blue",
+      backgroundColor: "rgb(75, 192, 192)",
     },
     {
       label: "PIB 2021",
@@ -34,15 +34,16 @@ const options = {
     title: {
       display: true,
       text: "10 Pays les + riches par PIB",
+      color: "#000",
       font: {
-        size: 16,
+        size: 20,
       },
     },
     subtitle: {
       display: true,
       text: "en Billions dollars US",
       font: {
-        size: 14,
+        size: 16,
       },
     },
     // maintainAspectRatio: false,
@@ -59,5 +60,5 @@ const options = {
 }
 
 export function Bar() {
-  return <BarChart data={data} height={500} options={options} />
+  return <BarChart data={data} height={500} width={500} options={options} />
 }

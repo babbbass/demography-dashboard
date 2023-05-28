@@ -31,7 +31,7 @@ const data = {
     {
       label: "$ US",
       data: wealth.map((character) => character.wealth_2023),
-      backgroundColor: "blue",
+      backgroundColor: "rgb(75, 192, 192)",
     },
   ],
 }
@@ -46,7 +46,7 @@ const options = {
       color: "#000",
 
       font: {
-        size: 14,
+        size: 20,
       },
     },
     subtitle: {
@@ -54,6 +54,7 @@ const options = {
       text: "source: Forbes",
     },
   },
+  maintainAspectRatio: false,
   scales: {
     y: {
       ticks: {
@@ -66,5 +67,5 @@ const options = {
 }
 
 export default function Wealth() {
-  return <Bar options={options} data={data} height={400} />
+  return <Bar options={options} data={data} height={250} width={400} />
 }

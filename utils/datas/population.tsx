@@ -19,3 +19,16 @@ export const worldPopulation = [
   { year: 2015, population: 7.38 },
   { year: 2020, population: 7.79 },
 ]
+
+export const countryPopulation = [
+  { name: "Chine", population: 1425 },
+  { name: "Inde", population: 1407 },
+  { name: "États-Unis", population: 336.997 },
+  { name: "Indonésie", population: 273.753 },
+  { name: "Pakistan", population: 231.402 },
+  { name: "Brésil", population: 214.326 },
+  { name: "Nigeria", population: 213.401 },
+  { name: "Bangladesh", population: 169.356 },
+  { name: "Russie", population: 145.102 },
+  { name: "Mexique", population: 126.705 },
+]
