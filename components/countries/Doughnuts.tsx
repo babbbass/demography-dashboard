@@ -44,7 +44,7 @@ const doughnutsOptions = {
       },
     },
     legend: {
-      position: `left`,
+      position: "left" as const,
     },
     maintainAspectRatio: false,
   },

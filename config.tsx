@@ -1,6 +1,6 @@
 export const datalabelsConfig = {
   color: "#000",
   font: {
-    weight: `bold`,
+    weight: "bold" as const,
   },
 }
