@@ -31,7 +31,7 @@ const data = {
     {
       label: "$ US",
       data: wealth.map((character) => character.wealth_2023),
-      backgroundColor: "rgb(75, 192, 192)",
+      backgroundColor: "#14b8a6",
     },
   ],
 }

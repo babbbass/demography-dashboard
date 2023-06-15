@@ -31,22 +31,7 @@ const options = {
   responsive: true,
   plugins: {
     datalabels: { ...datalabelsConfig, rotation: 90 },
-    title: {
-      display: true,
-      text: "10 Pays les + riches par PIB",
-      color: "#000",
-      font: {
-        size: 20,
-      },
-    },
-    subtitle: {
-      display: true,
-      text: "en Billions dollars US",
-      font: {
-        size: 16,
-      },
-    },
-    // maintainAspectRatio: false,
+    maintainAspectRatio: false,
   },
   scales: {
     y: {

@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import { Line as LineChart } from "react-chartjs-2"
 import { Chart as ChartJS, PointElement, LineElement } from "chart.js"
