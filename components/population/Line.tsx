@@ -1,10 +1,16 @@
 "use client"
 import { Line as LineChart } from "react-chartjs-2"
-import { Chart as ChartJS, PointElement, LineElement } from "chart.js"
+import {
+  Chart as ChartJS,
+  PointElement,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+} from "chart.js"
 import { worldPopulation } from "@/utils/datas/population"
 import { datalabelsConfig } from "@/config"
 
-ChartJS.register(PointElement, LineElement)
+ChartJS.register(PointElement, LineElement, CategoryScale, LinearScale)
 
 const data = {
   labels: worldPopulation.map((pop) => pop.year),

@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   try {
     const { email, password, name } = await req.json()
     const hashed = await hash(password, 12)
-    console.log(email, hashed, name)
+
     const user = await prisma.user.create({
       data: { email, name, password: hashed },
     })

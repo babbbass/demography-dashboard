@@ -3,9 +3,8 @@ import Link from "next/link"
 
 export default function SignIn() {
   return (
-    <div className='w-full flex flex-col justify-center items-center'>
-      {/* <div className='mt-10 min-h-400 lg:w-1/3 md:w-2/3  bg-slate-100 p-4'> */}
-      <div className='mt-10 min-h-400'>
+    <div className='w-full mt-10 flex flex-col h-screen items-center'>
+      <div className='min-h-400'>
         <div className='shadow-xl m-auto py-10 bg-white px-8 rounded-xl'>
           <h1 className='font-semibold text-2xl pb-6'>
             Connectez-vous à votre compte

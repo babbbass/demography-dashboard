@@ -18,12 +18,12 @@ export default async function RootLayout({
   const session = await getServerSession(authOptions)
   return (
     <html lang='fr'>
-      <body className='flex flex-col bg-gradient-to-b from-gray-100 to-gray-300 m-auto h-screen w-1/1 p-4 px-4 max-w-screen-xl'>
+      <body className='flex flex-col bg-gradient-to-b from-gray-100 to-gray-300 m-auto w-1/1 p-4 px-4 max-w-screen-xl'>
         <h1 className='text-teal-500 font-bold text-center mb-5 text-2xl italic'>
           <Link href='/'>Démographie Mondiale</Link>
         </h1>
         <Header session={session} />
-        <div className='mb-auto'>{children}</div>
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

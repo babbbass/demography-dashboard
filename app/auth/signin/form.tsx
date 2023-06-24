@@ -22,38 +22,36 @@ export default function SignInForm() {
     console.log(result)
   }
   return (
-    <>
-      <form onSubmit={onSubmit} className='mb-10 space-y-12'>
-        <div className='grid w-full max-w-sm items-center gap-1.5 '>
-          <Label className='font-semibold' htmlFor='email'>
-            E-mail
-          </Label>
-          <Input
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type='email'
-            id='email'
-            className='focus:border-teal-300 focus:border-2'
-          />
-        </div>
-        <div className='grid w-full max-w-sm items-center gap-1.5'>
-          <Label className='font-semibold' htmlFor='password'>
-            Mot de passe
-          </Label>
-          <Input
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type='password'
-            id='password'
-            className='focus:border-teal-300 focus:border-2'
-          />
-        </div>
-        <div className='grid w-full max-w-sm items-center gap-1.5'>
-          <Button className='bg-teal-500 font-bold text-lg'>Continuer</Button>
-        </div>
-      </form>
-    </>
+    <form onSubmit={onSubmit} className='mb-10 space-y-12'>
+      <div className='grid w-full max-w-sm items-center gap-1.5 '>
+        <Label className='font-semibold' htmlFor='email'>
+          E-mail
+        </Label>
+        <Input
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type='email'
+          id='email'
+          className='focus:border-teal-300 focus:border-2'
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-1.5'>
+        <Label className='font-semibold' htmlFor='password'>
+          Mot de passe
+        </Label>
+        <Input
+          required
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type='password'
+          id='password'
+          className='focus:border-teal-300 focus:border-2'
+        />
+      </div>
+      <div className='grid w-full max-w-sm items-center gap-1.5'>
+        <Button className='bg-teal-500 font-bold text-lg'>Continuer</Button>
+      </div>
+    </form>
   )
 }

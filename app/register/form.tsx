@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { signIn } from "next-auth/react"
-import { headers } from "next/dist/client/components/headers"
 import { useState } from "react"
 
 export default function RegisterForm() {
@@ -37,40 +36,51 @@ export default function RegisterForm() {
     }
   }
   return (
-    <form onSubmit={onSubmit} className='space-y-12 w-full'>
+    <form onSubmit={onSubmit} className='space-y-12 w-full min-w-200'>
       <div className='grid w-full max-w-sm items-center gap-1.5 '>
-        <Label htmlFor='email'>E-mail</Label>
+        <Label className='font-semibold' htmlFor='email'>
+          E-mail
+        </Label>
         <Input
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type='email'
           id='email'
+          className='focus:border-teal-300 focus:border-2'
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-1.5'>
-        <Label htmlFor='your-name'>Nom</Label>
+        <Label className='font-semibold' htmlFor='your-name'>
+          Nom
+        </Label>
         <Input
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
           type='text'
           id='your-name'
+          className='focus:border-teal-300 focus:border-2'
         />
       </div>
       <div className='grid w-full max-w-sm items-center gap-1.5'>
-        <Label htmlFor='password'>Mot de passe</Label>
+        <Label className='font-semibold' htmlFor='password'>
+          Mot de passe
+        </Label>
         <Input
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           type='password'
           id='password'
+          className='focus:border-teal-500 focus:border-2'
         />
       </div>
       {error && <Alert>{error}</Alert>}
       <div className='w-full'>
-        <Button className='w-full'>Créer un compte</Button>
+        <Button className='bg-teal-500 font-bold text-lg w-full'>
+          Créer un compte
+        </Button>
       </div>
     </form>
   )
