@@ -2,7 +2,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/api/auth/[...nextauth]/route"
-import "../styles/globals.css"
+import "@/styles/globals.css"
 import Link from "next/link"
 
 export const metadata = {
